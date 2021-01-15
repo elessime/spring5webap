@@ -20,6 +20,7 @@ public class Book {
     private String title;
     private String isbn;
     private String publisher;
+    private String new1;
 
     @ManyToMany
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
