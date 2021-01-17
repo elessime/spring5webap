@@ -16,7 +16,7 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String firstName;
-    private String lastname;
+    private String lastName;
 
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
@@ -26,7 +26,7 @@ public class Author {
 
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
-        this.lastname = lastName;
+        this.lastName = lastName;
     }
 
     public Author(String firstName, String lastName, Set<Book> books){
@@ -42,12 +42,12 @@ public class Author {
         this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Set<Book> getBooks() {
@@ -90,7 +90,7 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Author [books=" + books + ", firstName=" + firstName + ", id=" + id + ", lastname=" + lastname + "]";
+        return "Author [books=" + books + ", firstName=" + firstName + ", id=" + id + ", lastName=" + lastName + "]";
     }
 
     
